@@ -55,9 +55,18 @@ header ul li a:hover, .active{
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden; /*hides any element inside .main once it gets out of .main container*/
     
 }
 
+.main::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    height: 100px;
+    width:100%;
+    background: linear-gradient(to top,#200016,transparent);
+}
 .main img{
     position: absolute;
     width: 100%;
@@ -73,4 +82,18 @@ header ul li a:hover, .active{
     text-transform: uppercase;
     font-size: 25px;
     transform:translateY(-140);
+}
+
+.content{
+    color:#fff;
+    padding:30px;
+}
+
+.content h2{
+    margin:20px;
+    font-size:30px;
+}
+
+.content p{
+    margin:20px;
 }
